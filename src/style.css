@@ -59,10 +59,13 @@ h1 {
 
 .slidesPin, .flickFakes {
   position:absolute;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .flickFakes {
   visibility: hidden;
+  /*display: none;*/
 }
 
 .flickFakes div {

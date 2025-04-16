@@ -13,7 +13,6 @@ gsap.registerPlugin(ScrollTrigger);
 // });
 
 const html = document.querySelector("html");
-
 const animation = gsap.to(".slides", {
     xPercent: -80,
     duration: 5,
@@ -83,10 +82,15 @@ function createParticles() {
 }
 
 // Initialize particles when the page is loaded
-window.addEventListener('load', createParticles);
+// window.addEventListener('load', createParticles);
 
 
 window.addEventListener("resize", () => {
     html.classList.remove("snap");
+    ScrollTrigger.refresh()
+    setTimeout(()=> {
+        ScrollTrigger.refresh()
+    }, 500)
 });
+
 
